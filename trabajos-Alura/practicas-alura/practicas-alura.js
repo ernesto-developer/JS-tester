@@ -50,53 +50,40 @@
 //#############################################################################
 //#############################################################################
 
+
 var pantalla = document.querySelector("canvas");
 var pincel = pantalla.getContext("2d");
+var colores = ["green","white","red"];
 
-var colores = ["blue","white","red"];
+var cantidadDeCuadros = prompt("cuantos cuadros por color quieres?");
+var widthFlag = prompt("De cuantos pixeles de ancha quieres la bandera?")
 
-function DrawFlag(){
+function smallSquare(x,y,color){
 
-    var posY = 0;
+    pincel.fillStyle = color;
+    pincel.fillRect(x,y,50,50);
+    pincel.strokeRect(x,y,50,50);
+    
+}
+
+function makeFlag(numHeigh,numwidth){
+
+    var Ypos = 0;
+    var numberheightFlag = numHeigh;
+    var numberWidthFlag = numwidth
 
     colores.forEach(color => {
-        
-        pincel.fillStyle = color;
-        pincel.fillRect(0,posY,900,200 );   
-        pincel.strokeStyle;
-        pincel.strokeRect(0,posY,900,200);
-        posY += 200;
+
+        for(var squares = 1; squares <= numberheightFlag; squares++){
+
+            for(var x = 0; x <= numberWidthFlag; x += 50){
+                smallSquare(x,Ypos,color);
+            }
+                    Ypos += 50;
+
+
+        }
     });
 }
 
-function drawShield(){
-
-    pincel.fillStyle = "grey";
-    pincel.beginPath();
-    pincel.moveTo(450,300);
-    pincel.lineTo(350,210,);
-    pincel.lineTo(550,210);
-    pincel.fill();
-
-    pincel.moveTo(450,300);
-    pincel.lineTo(350,390);
-    pincel.lineTo(550, 390);
-    pincel.fill();
-
-    pincel.fillStyle = "black";
-    pincel.beginPath();
-    pincel.moveTo(448,300);
-    pincel.lineTo(350,212);
-    pincel.lineTo(350,388);
-    pincel.fill();
-
-    pincel.fillStyle = "red";
-    pincel.beginPath();
-    pincel.arc(500,300,30,0,2*Math.PI);
-    pincel.fill();
-
-
-}
-
-DrawFlag();
-drawShield();
+makeFlag(parseInt(cantidadDeCuadros),parseInt(widthFlag));

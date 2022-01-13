@@ -800,123 +800,120 @@
 // pincel para pintar estilo paint
 
 
-var pantalla = document.querySelector('canvas');
-var pincel = pantalla.getContext('2d');
+// var pantalla = document.querySelector('canvas');
+// var pincel = pantalla.getContext('2d');
 
-pincel.fillStyle = "white";
-pincel.fillRect(0, 0, 600, 400);
-pincel.strokeStyle = "black";
-pincel.strokeRect(0,0,600,400);
+// pincel.fillStyle = "white";
+// pincel.fillRect(0, 0, 600, 400);
+// pincel.strokeStyle = "black";
+// pincel.strokeRect(0,0,600,400);
 
-var puedoDibujar = false;
-var colores = ["black","red", "green", "blue","brown","pink","orange","violet","yellow"];
-var posXTintas = 5;
-var colorInicial = "black";
+// var puedoDibujar = false;
+// var colores = ["black","red", "green", "blue","brown","pink","orange","violet","yellow"];
+// var posXTintas = 5;
+// var colorInicial = "black";
 
-function dibujarCirculo(evento) {
-    var x = evento.pageX - pantalla.offsetLeft;
-    var y = evento.pageY - pantalla.offsetTop;
+// function dibujarCirculo(evento) {
+//     var x = evento.pageX - pantalla.offsetLeft;
+//     var y = evento.pageY - pantalla.offsetTop;
 
-    if (puedoDibujar && y > 54) {
-        pincel.fillStyle = colorInicial;
-        pincel.beginPath();
-        pincel.arc(x, y, 5, 0, 2 * 3.14);
-        pincel.fill();
+//     if (puedoDibujar && y > 54) {
+//         pincel.fillStyle = colorInicial;
+//         pincel.beginPath();
+//         pincel.arc(x, y, 5, 0, 2 * 3.14);
+//         pincel.fill();
+//     }
+
+// }
+
+
+// function habilitarDibujar() {
+
+//     puedoDibujar = true;
+// }
+
+// function deshabilitarDibujar() {
+
+//     puedoDibujar = false;
+// }
+
+// function tintas(x, y, color) {
+
+//     pincel.fillStyle = color;
+//     pincel.fillRect(x, y, 40, 40);
+//     pincel.fill();
+//     pincel.strokeRect(x, y, 40, 40);
+
+// }
+// function barraDeHerramientas() {
+
+//     pincel.fillStyle = "beige" ;
+//     pincel.fillRect(0, 0, 600, 50),
+//         pincel.fill();
+//     pincel.strokeStyle = "black";
+//     pincel.strokeRect(0, 0, 600, 50);
+//     colores.forEach(color => {
+
+//         tintas(posXTintas, 5, color);
+//         posXTintas = posXTintas + 45;
+
+//     });
+
+// }
+
+// function seleccionarColor(evento) {
+
+//     var xposComprobacion = 5;
+
+//     var x = evento.pageX - pantalla.offsetLeft;
+//     var y = evento.pageY - pantalla.offsetTop;
+
+//     if (y < 50) {
+//         for (var colorI = 0; colorI <= colores.length; colorI++) {
+//             if (x > xposComprobacion &&
+//                 x < xposComprobacion + 40 &&
+//                 y > 5 &&
+//                 y < 45) {
+//                 colorInicial = colores[colorI];
+//                 break;
+//             } else {
+//                 xposComprobacion = xposComprobacion + 45;
+//             }
+//         }
+//     }
+
+
+// }
+
+
+
+// barraDeHerramientas();
+// pantalla.onmousemove = dibujarCirculo;
+// pantalla.onmousedown = habilitarDibujar;
+// pantalla.onmouseup = deshabilitarDibujar;
+// pantalla.onclick = seleccionarColor;
+
+
+
+function comprobacion(){
+    var number1 = prompt("please select one number for check");
+    var number2 = prompt("please select at second number for checking");
+    document.write("click");
+
+    if( number1 < number2){
+       return document.write("The number " + number1 + " es menor que el numero " + number2);
+    }else if(number1 > number2){
+        return document.write("The number " + number1 + " es mayor que el numero " + number2);
+    }else{
+         return Document.write("The two numbers " + number1 + " and " + number2 + " it's the same number" );
     }
 
 }
 
+ var botonClick =  document.querySelector("button");
 
-function habilitarDibujar() {
-
-    puedoDibujar = true;
-}
-
-function deshabilitarDibujar() {
-
-    puedoDibujar = false;
-}
-
-function tintas(x, y, color) {
-
-    pincel.fillStyle = color;
-    pincel.fillRect(x, y, 40, 40);
-    pincel.fill();
-    pincel.strokeRect(x, y, 40, 40);
-
-}
-function barraDeHerramientas() {
-
-    pincel.fillStyle = "beige" ;
-    pincel.fillRect(0, 0, 600, 50),
-        pincel.fill();
-    pincel.strokeStyle = "black";
-    pincel.strokeRect(0, 0, 600, 50);
-    colores.forEach(color => {
-
-        tintas(posXTintas, 5, color);
-        posXTintas = posXTintas + 45;
-
-    });
-
-}
-
-function seleccionarColor(evento) {
-
-    var xposComprobacion = 5;
-
-    var x = evento.pageX - pantalla.offsetLeft;
-    var y = evento.pageY - pantalla.offsetTop;
-
-    if (y < 50) {
-        for (var colorI = 0; colorI <= colores.length; colorI++) {
-            if (x > xposComprobacion &&
-                x < xposComprobacion + 40 &&
-                y > 5 &&
-                y < 45) {
-                colorInicial = colores[colorI];
-                break;
-            } else {
-                xposComprobacion = xposComprobacion + 45;
-            }
-        }
-    }
-
-
-}
-
-
-
-barraDeHerramientas();
-pantalla.onmousemove = dibujarCirculo;
-pantalla.onmousedown = habilitarDibujar;
-pantalla.onmouseup = deshabilitarDibujar;
-pantalla.onclick = seleccionarColor;
-
-
-
-
-
-/**TODO: 
- * Crear una paleta de colores en la parte superior de 3 cuadros con los colores red, green y blue
- * cada cuadrado de 50 * 50, 
- * al hacer click ebe de cambiar el color con el que se esta dibujando
- * y no se debe de poder dibujar sobre estas paletas de colores
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+botonClick.onclick = comprobacion;
+// comprobacion();
 
 
 

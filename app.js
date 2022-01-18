@@ -36,14 +36,11 @@
 
 // }
 
-
 // var gandalf = new Jugador("Gandalf");
 // var legolas = new Jugador("Legolas");
 
 // console.log(legolas);
 // console.log(gandalf);
-
-
 
 // // gandalf.curar(legolas);
 
@@ -95,9 +92,6 @@
 // console.log(gandalf);
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-
-
-
 // function Persona(nombre) {
 
 //     this.nombre = nombre;
@@ -135,7 +129,6 @@
 //         this.estado(jugadorObj);
 //     }
 
-
 // }
 
 // //esto es para provar el prototypo  una funcion que se establece fuera de la clase
@@ -158,47 +151,41 @@
 // console.log(legolas);
 // console.log(leonidas);
 
-
-
 //###############################################################################################
-
 
 // function crearArreglos(){
 
 //     var arr = [];
 //     var numero = 1;
 
-//     arr.push( 
+//     arr.push(
 //         (function(numero){
 //           return  function (){
 //                 console.log(numero);
-//             } 
+//             }
 
 //         })(numero)
 //         );
 
-
 //     numero = 2;
-//     arr.push( 
+//     arr.push(
 //         (function(numero){
 //           return  function (){
 //                 console.log(numero);
-//             } 
+//             }
 
 //         })(numero)
 //         );
 
 //     numero = 3;
-//     arr.push( 
+//     arr.push(
 //         (function(numero){
 //           return  function (){
 //                 console.log(numero);
-//             } 
+//             }
 
 //         })(numero)
 //         );
-
-
 
 //     return arr;
 
@@ -210,9 +197,7 @@
 // listaDeArrglos[1]();
 // listaDeArrglos[2]();
 
-
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
 
 // COOKIES
 
@@ -248,9 +233,7 @@
 //                }
 //         }
 
-
 // }
-
 
 // // crearCookie("nombre", "Ernesto");
 // // crearCookie("direccion", "blvd. del rodeo 155 int 84");
@@ -269,9 +252,7 @@
 
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-
 // Funciones call,bind,apply.
-
 
 // var carro = {
 //     color: "Blanco",
@@ -293,7 +274,6 @@
 //     console.log("==========================");
 // }
 
-
 // var logModeloCarro = logCarro.bind(carro);
 // logModeloCarro("abc","123");
 
@@ -302,7 +282,6 @@
 
 // // funcion prestada del carro para mostrar los parametros del carro2
 // console.log (carro.imprimir.call(carro2));
-
 
 // ##############################################################################################
 
@@ -316,7 +295,7 @@
 //     trabajo: "Mecanico"
 
 // }
-// // De JS objet a JSON 
+// // De JS objet a JSON
 // var convertToJsonString = JSON.stringify(objetoJS);
 // console.log(convertToJsonString);
 // // De JSON a JS objet
@@ -359,7 +338,7 @@
 //     // if( ernesto.hasOwnProperty(propiedad))
 //     // continue;
 
-//     /**En esta lo mismo que la enterior pero al ponerle la negativa al 
+//     /**En esta lo mismo que la enterior pero al ponerle la negativa al
 //      * principio se condicion a que solo se muestre la propiedades del objeto
 //      */
 //     if( !ernesto.hasOwnProperty(propiedad))
@@ -377,7 +356,6 @@
 // setTimeout(function (){
 //     console.log("paso un segundo");
 // },1000);
-
 
 /**En esta funcion se ejecuta el ecodigo hasta que llegue al tiempo establecido
  * de 5 segundos y se detiene
@@ -421,7 +399,6 @@
 //     } else {
 //         document.write("<h2>Es mas eficiente usando Alcohol</h2>");
 //     }
-
 
 // }
 
@@ -485,7 +462,6 @@
 // Dibujando con Canvas
 // var pantalla = document.querySelector("canvas");
 // var pincel = pantalla.getContext("2d");
-
 
 // pincel.fillStyle = "green";
 // pincel.fillRect(0,0,350,300);
@@ -555,7 +531,6 @@
 
 // function dibujarPetalos(){
 
-
 //     var colores = ["blue","yellow","green","orange"];
 //     var colorIndex = 0;
 
@@ -572,13 +547,12 @@
 
 // }
 
-
 // dibujarCirculo(300,200,20,"red");
 // dibujarPetalos();
 
-//############################################################################ 
 //############################################################################
-// Dibujar columnas 
+//############################################################################
+// Dibujar columnas
 
 // function dibujarRectangulo(x,y,ancho,altura,color){
 
@@ -607,12 +581,10 @@
 // var serie2019 = [81,9,3,3,4];
 // var colores = ["blue","green","yellow","red","gray"];
 
-
-
 // function dibujarColumna(x,y,serie,color,texto){
 
 //     var sumatoria = 0;
-//     for(var i = 0; i <= serie.length; i++ ){    
+//     for(var i = 0; i <= serie.length; i++ ){
 
 //         dibujarRectangulo(x,y+sumatoria,50,serie[i],color[i]);
 //         sumatoria = sumatoria+serie[i];
@@ -627,7 +599,6 @@
 // ########################################################################################
 // Dibujar circulos dependiendo el click
 
-
 // var pantalla = document.querySelector("canvas");
 // var pincel = pantalla.getContext("2d");
 // pincel.fillStyle = "grey";
@@ -640,7 +611,7 @@
 
 //     var x = evento.pageX - pantalla.offsetLeft;
 //     var y = evento.pageY - pantalla.offsetTop;
-//     pincel.fillStyle = colores[i]; 
+//     pincel.fillStyle = colores[i];
 //     pincel.beginPath();
 //     pincel.arc(x,y,10,0,2*3.14);
 //     pincel.fill();
@@ -659,7 +630,6 @@
 //     if(i >= colores.length){
 //         i = 0;
 //     }
-
 
 //     return false;
 // }
@@ -691,11 +661,8 @@
 
 // function renderizadoDeCirculo() {
 
-
-
 //     limpiarPantalla();
 //     dibujarCirculo(x, 20, 20);
-
 
 //     switch (i) {
 //         case 0:
@@ -717,12 +684,10 @@
 
 //     }
 
-
 // }
 
-
 // setInterval(renderizadoDeCirculo, 5);
-// 
+//
 
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -751,14 +716,11 @@
 //     pincel.clearRect(0, 0, 600, 400);
 // }
 
-
 // function diseniarObjetivo(x,y){
 
 //     dibujarCirculo(x,y,radio+20,"red");
 //     dibujarCirculo(x,y,radio+10,"white");
 //     dibujarCirculo(x,y,radio,"red");
-
-
 
 // }
 
@@ -778,7 +740,6 @@
 
 // setInterval(acutalizarPantalla,700);
 
-
 // function disparar(evento){
 
 //     var x = evento.pageX - pantalla.offsetLeft;
@@ -794,11 +755,9 @@
 
 // pantalla.onclick = disparar;
 
-
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // pincel para pintar estilo paint
-
 
 // var pantalla = document.querySelector('canvas');
 // var pincel = pantalla.getContext('2d');
@@ -825,7 +784,6 @@
 //     }
 
 // }
-
 
 // function habilitarDibujar() {
 
@@ -882,10 +840,7 @@
 //         }
 //     }
 
-
 // }
-
-
 
 // barraDeHerramientas();
 // pantalla.onmousemove = dibujarCirculo;
@@ -893,29 +848,68 @@
 // pantalla.onmouseup = deshabilitarDibujar;
 // pantalla.onclick = seleccionarColor;
 
+// function comprobacion(){
+//     var number1 = prompt("please select one number for check");
+//     var number2 = prompt("please select at second number for checking");
+//     document.write("click");
 
+//     if( number1 < number2){
+//        return document.write("The number " + number1 + " es menor que el numero " + number2);
+//     }else if(number1 > number2){
+//         return document.write("The number " + number1 + " es mayor que el numero " + number2);
+//     }else{
+//          return Document.write("The two numbers " + number1 + " and " + number2 + " it's the same number" );
+//     }
 
-function comprobacion(){
-    var number1 = prompt("please select one number for check");
-    var number2 = prompt("please select at second number for checking");
-    document.write("click");
+// }
 
-    if( number1 < number2){
-       return document.write("The number " + number1 + " es menor que el numero " + number2);
-    }else if(number1 > number2){
-        return document.write("The number " + number1 + " es mayor que el numero " + number2);
-    }else{
-         return Document.write("The two numbers " + number1 + " and " + number2 + " it's the same number" );
+//  var botonClick =  document.querySelector("button");
+
+// botonClick.onclick = comprobacion;
+// comprobacion();
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// pruebas de logica del challenge logica de programacion 1
+var textoPrueba = "carola williams lara";
+var textoprueba2 = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober"
+
+function encriptar(wrd) {
+    // console.log("esto es o-- "+o);
+   if(wrd == "a"){
+       wrd = "ai";
+   }else if(wrd == "e"){
+       wrd = "enter";
+   }else if(wrd == "i"){
+       wrd = "imes";
+   }else if(wrd == "o"){
+       wrd = "ober";
+   }else if(wrd == "u"){
+       wrd = "ufat";
+   }
+    
+
+  return wrd;
+}
+
+function desencriptar(wrd){
+
+    if(wrd == "ai"){
+        wrd = "a";
+    }else if(wrd == "enter"){
+        wrd = "e";
+    }else if(wrd == "imes"){
+        wrd = "i";
+    }else if(wrd == "ober"){
+        wrd = "o";
+    }else if(wrd == "ufat"){
+        wrd = "u"
     }
+    return wrd;
 
 }
 
- var botonClick =  document.querySelector("button");
 
-botonClick.onclick = comprobacion;
-// comprobacion();
+// var newtexto = textoPrueba.replace(/[aeiou]/g, encriptar);
+// document.write( "<h1>"+ newtexto  +"</h1>" );
 
-
-
-
-
+var newtexto = textoprueba2.replace(/ai|enter|imes|ober|ufat/g, desencriptar);
+document.write( "<h1>"+ newtexto  +"</h1>" );

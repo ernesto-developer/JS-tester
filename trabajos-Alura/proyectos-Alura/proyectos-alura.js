@@ -2,13 +2,21 @@ var textoIntro = document.querySelector("#input-texto");
 var botonEncriptarClick = document.querySelector("#btn-encriptar");
 var botosDesencriptar = document.querySelector("#btn-desencriptar");
 var mensajeText = document.querySelector("#msg");
+var regExp = /^[a-z\s]+$/;
+var inputText = document.querySelector("#input-texto");
 
-function checarTexto(){
+inputText.addEventListener('keyup',() =>{
+    
 
-    var textAChecar = textoIntro.value;
-
-
+if(regExp.test(inputText.value)){
+    console.log("si hay minusculas")
+}else{
+    console.log("no hay minusculas");
+    console.log(inputText.value);
 }
+
+
+})
 
 function encriptar(wrd) {
    if(wrd == "a"){

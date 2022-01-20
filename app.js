@@ -873,7 +873,6 @@ var textoPrueba = "carola williams lara";
 var textoprueba2 = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober"
 
 function encriptar(wrd) {
-    // console.log("esto es o-- "+o);
    if(wrd == "a"){
        wrd = "ai";
    }else if(wrd == "e"){
